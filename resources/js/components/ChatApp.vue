@@ -31,7 +31,7 @@
                     this.contacts = response.data;
                 });
         },
-        components: {ContactsList}
+        // components: {ContactsList}
     }
 </script>
 
