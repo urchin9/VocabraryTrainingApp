@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
+Route::group(['middleware' => 'auth.very_basic'], function() {
+  Route::get('/', function () {
     return view('welcome');
+  });
 });
