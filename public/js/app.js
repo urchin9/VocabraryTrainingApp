@@ -49840,9 +49840,10 @@ Vue.component('chat-app', __webpack_require__(/*! ./components/ChatApp.vue */ ".
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-// const Vue = require('vue');
-// Vue.config.productionTip = false;
 
+var Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+
+Vue.config.productionTip = false;
 var app = new Vue({
   el: '#app'
 });
