@@ -16,3 +16,7 @@ Route::group(['middleware' => 'auth.very_basic'], function() {
     return view('welcome');
   });
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
