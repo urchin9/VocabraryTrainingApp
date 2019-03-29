@@ -37642,37 +37642,25 @@ var render = function() {
     _c(
       "ul",
       _vm._l(_vm.sortedContacts, function(contact) {
-        return _c(
-          "li",
-          {
-            key: contact.id,
-            class: { selected: contact == _vm.selected },
-            on: {
-              click: function($event) {
-                return _vm.selectContact(contact)
-              }
-            }
-          },
-          [
-            _c("div", { staticClass: "avatar" }, [
-              _c("img", {
-                attrs: { src: contact.profile_image, alt: contact.name }
-              })
-            ]),
+        return _c("li", { key: contact.id }, [
+          _c("div", { staticClass: "avatar" }, [
+            _c("img", {
+              attrs: { src: contact.profile_image, alt: contact.name }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "contact" }, [
+            _c("p", { staticClass: "name" }, [_vm._v(_vm._s(contact.name))]),
             _vm._v(" "),
-            _c("div", { staticClass: "contact" }, [
-              _c("p", { staticClass: "name" }, [_vm._v(_vm._s(contact.name))]),
-              _vm._v(" "),
-              _c("p", { staticClass: "email" }, [_vm._v(_vm._s(contact.email))])
-            ]),
-            _vm._v(" "),
-            contact.unread
-              ? _c("span", { staticClass: "unread" }, [
-                  _vm._v(_vm._s(contact.unread))
-                ])
-              : _vm._e()
-          ]
-        )
+            _c("p", { staticClass: "email" }, [_vm._v(_vm._s(contact.email))])
+          ]),
+          _vm._v(" "),
+          contact.unread
+            ? _c("span", { staticClass: "unread" }, [
+                _vm._v(_vm._s(contact.unread))
+              ])
+            : _vm._e()
+        ])
       }),
       0
     )
