@@ -68,6 +68,13 @@ footer {
     color: #562f14;
 }
 
+/* welcome.blade.php */
+.top > a {
+    color: #333;
+    padding: 20px;
+    display: block;
+}
+
 /* home.blade.php */
 .sub-container {
     width: 90%;

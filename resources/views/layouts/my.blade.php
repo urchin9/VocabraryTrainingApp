@@ -17,15 +17,19 @@
                 <i class="canada fab fa-canadian-maple-leaf"></i>
             </h1>
         </div>
+        @guest
+        @else
         <nav class="mynav">
             <ul>
                 <li><a href="{{ url('posts') }}">Posts</a></li>
                 <li><a href="#">Quiz</a></li>
                 <li><a href="{{ url('words') }}">Vocabrary</a></li>
                 <li><a href="#">EditPlan</a></li>
-                <li><a href="{{ route('logout') }}">Logout</a></li>
+                <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
             </ul>
         </nav>
+        @endguest
     </header>
     <main>
         @yield('content')
