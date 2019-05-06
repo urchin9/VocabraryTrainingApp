@@ -15,6 +15,9 @@
         <textarea type="text" id="example" placeholder="Example" name="example"></textarea>
 
         <button type="submit" name="submit" class="btn submit">Add</button>
+        <button class="btn return">
+            <a href="{{ url('words/') }}">Return to List</a>
+        </button>
 
     </form>
 </div>

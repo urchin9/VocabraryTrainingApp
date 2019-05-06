@@ -5,14 +5,18 @@ body {
     padding: 0;
 }
 
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 a {
     color: #f9f3e3;
     text-decoration: none;
 }
 
-a:visited {
+/* a:visited {
     color: #f9f3e3;
-}
+} */
 
 .container h1 {
     font-size: 20px;
@@ -70,9 +74,12 @@ footer {
 
 /* welcome.blade.php */
 .top > a {
-    color: #333;
     padding: 20px;
+    background: #a97655;
+    margin: 5px auto 15px;
     display: block;
+    border-radius: 5px;
+    text-align: center;
 }
 
 /* home.blade.php */
@@ -172,8 +179,8 @@ footer {
     display: block;
 }
 
-/* words/create.blade.php, edit.blade.php */
-.word-create input, .edit-word input {
+/* words/create.blade.php, edit.blade.php, login.blade.php */
+.word-create input, .edit-word input, .login-container > form > input {
     display: block;
     margin: 10px auto 30px;
     width: 80%;
@@ -190,7 +197,7 @@ footer {
 }
 
 .word-create .submit {
-    background: #78C0A8;
+    background: #9cc48e;
     margin: 20px auto;
     font-size: 18px;
     color: #fff;
@@ -249,11 +256,27 @@ footer {
 }
 
 /* words/edit.blade.php */
-.edit-word {
-
-}
 
 .update {
     background: #9cc48e;
     margin-top: 20px; 
+}
+
+/* login.blade.php */
+.forget-pw {
+    color: #5E412F;
+    line-height: 2;
+}
+
+.btn9cc48e {
+    background: #9cc48e;
+}
+
+.login-container {
+    margin: 20px auto;
+}
+
+.form-check {
+    margin: 20px auto;
+    padding: 0 20px;
 }
