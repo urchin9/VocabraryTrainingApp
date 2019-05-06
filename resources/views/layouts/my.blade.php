@@ -7,13 +7,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title></title>
+    <title>IELTS Training</title>
 </head>
 <body>
     <header>
         <div class="title">
             <h1>
-                <a href="/home">IELTS training</a>
+                <a href="/home">IELTS Training</a>
                 <i class="canada fab fa-canadian-maple-leaf"></i>
             </h1>
         </div>

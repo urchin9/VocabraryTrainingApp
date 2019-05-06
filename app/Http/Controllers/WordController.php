@@ -61,9 +61,9 @@ class WordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Word $word)
     {
-        //
+        return view('words.edit', ['word' => $word]);
     }
 
     /**
@@ -73,9 +73,13 @@ class WordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Word $word)
     {
-        //
+        $word->word = $request->word;
+        $word->meaning = $request->meaning;
+        $word->example = $request->example;
+        $word->save();
+        return redirect('words/' . $word->id);
     }
 
     /**
@@ -84,8 +88,9 @@ class WordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Word $word)
     {
-        //
+        $word->delete();
+        return redirect('words');
     }
 }
