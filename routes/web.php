@@ -18,5 +18,6 @@ Route::group(['middleware' => 'auth.very_basic'], function() {
   Auth::routes();
   Route::get('/home', 'HomeController@index')->name('home');
   Route::resource('posts', 'PostController');
+  Route::resource('words', 'WordController');
   
 });

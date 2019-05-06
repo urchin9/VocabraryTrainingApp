@@ -21,7 +21,7 @@
             <ul>
                 <li><a href="{{ url('posts') }}">Posts</a></li>
                 <li><a href="#">Quiz</a></li>
-                <li><a href="#">Vocabrary</a></li>
+                <li><a href="{{ url('words') }}">Vocabrary</a></li>
                 <li><a href="#">EditPlan</a></li>
                 <li><a href="{{ route('logout') }}">Logout</a></li>
             </ul>

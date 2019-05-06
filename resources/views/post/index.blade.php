@@ -6,9 +6,9 @@
     <h1>blog list</h1>
     <ul>
         @forelse ($posts as $post)
-            <li>{{ $post->title }}</li>
+            <li><a href="{{ url('post/' . $post->id) }}">{{ $post->title }}</a></li>
         @empty
-            <p>No Post Yet</p>
+            <li>No Post yet</li>
         @endforelse
     </ul>
 </div>

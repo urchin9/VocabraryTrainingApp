@@ -1,6 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #eee;
+    background: #d4d4d4;
     margin: 0;
     padding: 0;
 }
@@ -42,7 +42,7 @@ main {
 }
 
 .container {
-    width: 90%;
+    width: 100%;
 }
 .container h3 {
     margin: 0;
@@ -116,3 +116,107 @@ footer {
 .container > h1 {
     margin: 0;
 } 
+
+.container li {
+    list-style: none;
+}
+
+/* word/index.blade.php */
+
+.inline-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inline-container > h1 {
+    margin: 0;
+}
+
+.inline-container > a {
+    line-height: 2;
+    background: #3972d0;
+    padding: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container > ul {
+    padding: 0;
+    margin: 0 20px;
+}
+
+.container > ul > li {
+    margin: 15px 0;
+    border-bottom: solid 2px gray;
+}
+
+.container > ul > li > a {
+    color: #333;
+    font-size: 18px;
+    display: block;
+}
+
+/* words/create.blade.php */
+.word-create input {
+    display: block;
+    margin: 10px auto 30px;
+    width: 80%;
+    height: 25px;
+    font-size: 15px;
+}
+
+.word-create textarea {
+    display: block;
+    width: 80%;
+    height: 60px;
+    margin: 10px auto;
+    font-size: 15px;
+}
+
+.word-create .submit {
+    background: darkcyan;
+    margin: 20px auto;
+    font-size: 18px;
+    color: #fff;
+}
+
+.btn {
+    width: 85%;
+    height: 35px;
+    border-radius: 3px;
+    display: block;
+}
+
+.btn a {
+    display: block;
+}
+
+/* words/show.blade.php */
+.show-word p::before {
+    color: gray;
+    display: block;
+    font-size: 15px;
+    margin-left: -15px;
+}
+
+.show-word .word::before {
+    content: 'Word';
+}
+
+.show-word .meaning::before {
+    content: 'Meaning';
+}
+
+.show-word .example::before {
+    content: 'Example';
+}
+
+.show-word p {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.return {
+    background: #2763c1;
+    font-size: 18px;
+}
