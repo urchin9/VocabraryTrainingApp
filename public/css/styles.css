@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eee;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+}
+
+header {
+    background: inherit;
+    color: #333333;
+    padding: 0 10px;
+}
+
+.mynav > ul {
+    margin: 0;  
+    padding: 0 0 10px;
+    display: flex;
+    justify-content: start;
+    overflow: scroll;
+}
+
+.mynav > ul > li {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 3px;
+    margin-left: 1px;
+    background: #5e5b5c;
+
+}
+
+main {
+    padding: 30px;
+}
+
+.container {
+    width: 90%;
+}
+.container h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.canada {
+    color: #ce4128;
+}
+
+footer {
+    margin: 15px auto;
+    text-align: center;
+    color: #5e5b5c;
+}
+
+/* home.blade.php */
+.sub-container {
+    width: 90%;
+    display: flex;
+    margin-top: 10px;
+    border-bottom: dashed 1px gray;
+}
+
+.num {
+    font-size: 30px;
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+}
+
+.num i {
+    margin: 10px auto;
+    color: #2763c1;
+}
+
+.num p {
+    margin: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: #5e5b5c;
+}
+
+.mydate {
+    width: 55%;
+    /* padding: 10px; */
+}
+
+.aim {
+    font-weight: 700;
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.p-day {
+    margin: 0;
+    font-size: 20px;
+}
+
+.isDone {
+    width: 20%;
+    text-align: center;
+}
+
+.isDone i {
+    font-size: 40px;
+    margin:10px 0 10px 15px;
+}
+
+/* post/index.blade.php */
+.container > h1 {
+    margin: 0;
+} 
