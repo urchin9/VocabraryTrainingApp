@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(['middleware' => 'auth.very_basic'], function() {
+// Route::group(['middleware' => 'auth.very_basic'], function() {
   Route::get('/', function () {
     return view('welcome');
   });
@@ -20,4 +20,4 @@ Route::group(['middleware' => 'auth.very_basic'], function() {
   Route::resource('posts', 'PostController');
   Route::resource('words', 'WordController');
   
-});
+// });
