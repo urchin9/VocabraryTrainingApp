@@ -2,8 +2,9 @@
     <div class="quiz-container" v-if="words[i]">
     <h1>Quiz</h1>
     <p>{{ words[i].word }}</p>
-    <p>{{ words[i].meaning }}</p> 
-    <p>{{ words[i].example }}</p>
+    <p>{{ meaning }}</p> 
+    <p>{{ example }}</p>
+    <button class="btn answer" v-on:click="revealAnswer">Answer</button>
     <button class="btn next" v-on:click="randomNumber">Next</button>
     </div>
 </template>
@@ -13,13 +14,23 @@ export default {
     data() {
         return {
             words: [],
-            i: 0
+            i: 0,
+            meaning: '???',
+            example:  '????'
         }
     },
     methods: {
-        'randomNumber': function() {
+        randomNumber() {
             this.i = Math.floor(Math.random() * this.words.length);
-            console.log(this.i);
+            this.meaning = '???';
+            this.example = '????';
+        },
+        revealAnswer() {
+            if (this.meaning !== '???' && this.example !== '????') {
+                return;
+            }
+            this.meaning = this.words[this.i].meaning;
+            this.example = this.words[this.i].example;
         }
     },
     mounted() {
@@ -41,6 +52,11 @@ export default {
 
 .next {
     background: #9cc48e;
+}
+
+.answer {
+    margin: 50px auto 30px;
+    background: #637d59;
 }
 
 </style>

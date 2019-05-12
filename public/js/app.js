@@ -1773,17 +1773,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       words: [],
-      i: 0
+      i: 0,
+      meaning: '???',
+      example: '????'
     };
   },
   methods: {
-    'randomNumber': function randomNumber() {
+    randomNumber: function randomNumber() {
       this.i = Math.floor(Math.random() * this.words.length);
-      console.log(this.i);
+      this.meaning = '???';
+      this.example = '????';
+    },
+    revealAnswer: function revealAnswer() {
+      if (this.meaning !== '???' && this.example !== '????') {
+        return;
+      }
+
+      this.meaning = this.words[this.i].meaning;
+      this.example = this.words[this.i].example;
     }
   },
   mounted: function mounted() {
@@ -6254,7 +6266,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".quiz-container p[data-v-8970721e] {\n  text-align: center;\n  background: #ffffff73;\n  width: 85%;\n  margin: 10px auto 30px;\n  line-height: 2;\n}\n.next[data-v-8970721e] {\n  background: #9cc48e;\n}", ""]);
+exports.push([module.i, ".quiz-container p[data-v-8970721e] {\n  text-align: center;\n  background: #ffffff73;\n  width: 85%;\n  margin: 10px auto 30px;\n  line-height: 2;\n}\n.next[data-v-8970721e] {\n  background: #9cc48e;\n}\n.answer[data-v-8970721e] {\n  margin: 50px auto 30px;\n  background: #637d59;\n}", ""]);
 
 // exports
 
@@ -37490,9 +37502,15 @@ var render = function() {
         _vm._v(" "),
         _c("p", [_vm._v(_vm._s(_vm.words[_vm.i].word))]),
         _vm._v(" "),
-        _c("p", [_vm._v(_vm._s(_vm.words[_vm.i].meaning))]),
+        _c("p", [_vm._v(_vm._s(_vm.meaning))]),
         _vm._v(" "),
-        _c("p", [_vm._v(_vm._s(_vm.words[_vm.i].example))]),
+        _c("p", [_vm._v(_vm._s(_vm.example))]),
+        _vm._v(" "),
+        _c(
+          "button",
+          { staticClass: "btn answer", on: { click: _vm.revealAnswer } },
+          [_vm._v("Answer")]
+        ),
         _vm._v(" "),
         _c(
           "button",

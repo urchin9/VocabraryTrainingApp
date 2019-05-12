@@ -143,10 +143,19 @@ footer {
 /* post/index.blade.php */
 .container > h1 {
     margin: 0;
-} 
+}
 
-.container li {
+.container > .post-ul {
+    margin: 20px auto;
+}
+
+.post-list {
     list-style: none;
+    margin: 10px auto;
+}
+
+.post-link {
+    color: #5e5b5c;
 }
 
 /* words/index.blade.php */
@@ -172,6 +181,7 @@ footer {
 .container > ul {
     padding: 0;
     margin: 0 20px;
+    list-style: none;
 }
 
 .word-items {
@@ -189,10 +199,11 @@ footer {
 ul.pagination {
     display: flex;
     justify-content: center;
+    margin: 30px 20px 10px;
 }
 
 ul.pagination > li {
-    padding: 5px;
+    padding: 10px;
 }
 
 .container > ul > li.page-item.active {
@@ -217,8 +228,8 @@ li.page-item.active > .page-link {
     color: #fff!important;
 }
 
-/* words/create.blade.php, edit.blade.php, login.blade.php */
-.word-create input, .edit-word input, .login-container > form > input {
+/* words/create.blade.php, edit.blade.php, login.blade.php, post/create.blade.php */
+.word-create input, .edit-word input, .login-container > form > input, .post-create input, .edit-post input {
     display: block;
     margin: 10px auto 30px;
     width: 80%;
@@ -226,7 +237,7 @@ li.page-item.active > .page-link {
     font-size: 15px;
 }
 
-.word-create textarea, .edit-word textarea {
+.word-create textarea, .edit-word textarea, .post-create textarea, .edit-post textarea {
     display: block;
     width: 80%;
     height: 60px;
@@ -294,11 +305,12 @@ li.page-item.active > .page-link {
 }
 
 /* words/edit.blade.php */
-
-.update {
+/* post/create.blade.php */
+.update, .post {
     background: #9cc48e;
     margin-top: 20px; 
 }
+
 
 /* login.blade.php */
 .forget-pw {
@@ -318,3 +330,4 @@ li.page-item.active > .page-link {
     margin: 20px auto;
     padding: 0 20px;
 }
+

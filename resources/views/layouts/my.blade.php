@@ -22,7 +22,7 @@
         @else
         <nav class="mynav">
             <ul>
-                <li><a href="{{ url('posts') }}">Posts</a></li>
+                <li><a href="{{ url('post') }}">Posts</a></li>
                 <li><a href="{{ url('quiz') }}">Quiz</a></li>
                 <li><a href="{{ url('words') }}">Vocabrary</a></li>
                 <li><a href="#">EditPlan</a></li>
