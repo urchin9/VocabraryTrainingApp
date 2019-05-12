@@ -8,12 +8,12 @@
     </div>
     <ul>
         @forelse ($words as $word)
-            <li><a href="{{ url('words/' . $word->id) }}">{{ $word->word }}</a></li>
+            <li class="word-items"><a href="{{ url('words/' . $word->id) }}">{{ $word->word }}</a></li>
         @empty
             <li>No word yet</li>
         @endforelse
     </ul>
 
-
+    {{ $words->links() }}
 </div>
 @endsection

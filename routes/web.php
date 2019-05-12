@@ -19,5 +19,6 @@
   Route::get('/home', 'HomeController@index')->name('home');
   Route::resource('posts', 'PostController');
   Route::resource('words', 'WordController');
-  
+  Route::get('/quiz', 'QuizController@index');
+  Route::get('quiz/words', 'QuizController@getWords');
 // });

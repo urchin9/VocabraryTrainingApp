@@ -42,11 +42,17 @@ header h1 {
 
 .mynav > ul > li {
     display: inline-block;
-    padding: 10px 15px;
     border-radius: 3px;
     margin-left: 1px;
-    background: #F0A830;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #F0A830 ;
+}
 
+.mynav > ul > li > a {
+    display: block;
+    padding: 0 15px;
 }
 
 main {
@@ -143,7 +149,7 @@ footer {
     list-style: none;
 }
 
-/* word/index.blade.php */
+/* words/index.blade.php */
 
 .inline-container {
     display: flex;
@@ -168,15 +174,47 @@ footer {
     margin: 0 20px;
 }
 
-.container > ul > li {
+.word-items {
     margin: 15px 0;
     border-bottom: solid 2px gray;
 }
 
-.container > ul > li > a {
+.word-items > a {
     color: #333;
     font-size: 18px;
     display: block;
+}
+
+
+ul.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+ul.pagination > li {
+    padding: 5px;
+}
+
+.container > ul > li.page-item.active {
+    background: #84ce9f;
+}
+
+.page-item > span, .page-item > a {
+    font-size: 20px;
+    color: #84ce9f;
+}
+
+.page-item {
+    background: #fff;
+    border: solid 1px #84ce9f;
+}
+
+.container > ul > li.page-item {
+    border-bottom: solid 1px #84ce9f;
+}
+
+li.page-item.active > .page-link {
+    color: #fff!important;
 }
 
 /* words/create.blade.php, edit.blade.php, login.blade.php */

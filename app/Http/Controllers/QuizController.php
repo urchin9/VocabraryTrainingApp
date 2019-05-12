@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Word;
 use Illuminate\Http\Request;
 
-class WordController extends Controller
+class QuizController extends Controller
 {
 
     public function __construct() {
@@ -18,10 +18,14 @@ class WordController extends Controller
      */
     public function index()
     {
-        $words = Word::paginate(10);
-        return view('words.index', ['words' => $words]);
+        return view('quiz.index');
+        // return view('quiz.index', ['words' => $words]);
     }
 
+    public function getWords() {
+        $words = Word::all();
+        return ['words' => $words];
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -29,7 +33,7 @@ class WordController extends Controller
      */
     public function create()
     {
-        return view('words.create');
+        //
     }
 
     /**
@@ -40,12 +44,7 @@ class WordController extends Controller
      */
     public function store(Request $request)
     {
-        $word = new Word;
-        $word->word = $request->word;
-        $word->meaning = $request->meaning;
-        $word->example = $request->example;
-        $word->save();
-        return redirect('words/create');
+        //
     }
 
     /**
@@ -54,9 +53,9 @@ class WordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Word $word)
+    public function show($id)
     {
-        return view('words.show', ['word' => $word]);
+        //
     }
 
     /**
@@ -65,9 +64,9 @@ class WordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Word $word)
+    public function edit($id)
     {
-        return view('words.edit', ['word' => $word]);
+        //
     }
 
     /**
@@ -77,13 +76,9 @@ class WordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Word $word)
+    public function update(Request $request, $id)
     {
-        $word->word = $request->word;
-        $word->meaning = $request->meaning;
-        $word->example = $request->example;
-        $word->save();
-        return redirect('words/' . $word->id);
+        //
     }
 
     /**
@@ -92,9 +87,8 @@ class WordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Word $word)
+    public function destroy($id)
     {
-        $word->delete();
-        return redirect('words');
+        //
     }
 }
