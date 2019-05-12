@@ -7,8 +7,8 @@
     <form action="{{ url('post/') }}" method="POST" class="post-create">
     @csrf
     @method('POST')
-    <input type="text" name="title" placeholder="title" autofocus>
-    <textarea name="body" placeholder="body"></textarea>
+    <input type="text" name="title" placeholder="title" autofocus required>
+    <textarea name="body" placeholder="body" required></textarea>
     <button type="submit" class="btn post">Create</button>
     <button class="btn return">
         <a href="{{ url('post/') }}">Return to List</a>

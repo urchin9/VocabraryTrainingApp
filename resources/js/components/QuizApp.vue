@@ -1,8 +1,8 @@
 <template>
     <div class="quiz-container" v-if="words[i]">
     <h1>Quiz</h1>
-    <p>{{ words[i].word }}</p>
-    <p>{{ meaning }}</p> 
+    <p>{{ words[i].meaning }}</p>
+    <p>{{ word }}</p> 
     <p>{{ example }}</p>
     <button class="btn answer" v-on:click="revealAnswer">Answer</button>
     <button class="btn next" v-on:click="randomNumber">Next</button>
@@ -15,21 +15,21 @@ export default {
         return {
             words: [],
             i: 0,
-            meaning: '???',
+            word: '???',
             example:  '????'
         }
     },
     methods: {
         randomNumber() {
             this.i = Math.floor(Math.random() * this.words.length);
-            this.meaning = '???';
+            this.word = '???';
             this.example = '????';
         },
         revealAnswer() {
-            if (this.meaning !== '???' && this.example !== '????') {
+            if (this.word !== '???' && this.example !== '????') {
                 return;
             }
-            this.meaning = this.words[this.i].meaning;
+            this.word = this.words[this.i].word;
             this.example = this.words[this.i].example;
         }
     },

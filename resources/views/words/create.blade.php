@@ -9,7 +9,7 @@
         <input id="word" type="text" name="word" placeholder="Word" required autofocus autocomplete="off">
 
         <!-- <label for="meaning">Meaning</label> -->
-        <input type="text" id="meaning" placeholder="Meaning" name="meaning" autocomplete="off">
+        <input type="text" id="meaning" placeholder="Meaning" name="meaning" required autocomplete="off">
 
         <!-- <label for="example">Example</label> -->
         <textarea type="text" id="example" placeholder="Example" name="example" autocomplete="off"></textarea>

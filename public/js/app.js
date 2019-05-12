@@ -1779,22 +1779,22 @@ __webpack_require__.r(__webpack_exports__);
     return {
       words: [],
       i: 0,
-      meaning: '???',
+      word: '???',
       example: '????'
     };
   },
   methods: {
     randomNumber: function randomNumber() {
       this.i = Math.floor(Math.random() * this.words.length);
-      this.meaning = '???';
+      this.word = '???';
       this.example = '????';
     },
     revealAnswer: function revealAnswer() {
-      if (this.meaning !== '???' && this.example !== '????') {
+      if (this.word !== '???' && this.example !== '????') {
         return;
       }
 
-      this.meaning = this.words[this.i].meaning;
+      this.word = this.words[this.i].word;
       this.example = this.words[this.i].example;
     }
   },
@@ -37500,9 +37500,9 @@ var render = function() {
     ? _c("div", { staticClass: "quiz-container" }, [
         _c("h1", [_vm._v("Quiz")]),
         _vm._v(" "),
-        _c("p", [_vm._v(_vm._s(_vm.words[_vm.i].word))]),
+        _c("p", [_vm._v(_vm._s(_vm.words[_vm.i].meaning))]),
         _vm._v(" "),
-        _c("p", [_vm._v(_vm._s(_vm.meaning))]),
+        _c("p", [_vm._v(_vm._s(_vm.word))]),
         _vm._v(" "),
         _c("p", [_vm._v(_vm._s(_vm.example))]),
         _vm._v(" "),
