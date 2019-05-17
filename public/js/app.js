@@ -1788,14 +1788,18 @@ __webpack_require__.r(__webpack_exports__);
       this.i = Math.floor(Math.random() * this.words.length);
       this.word = '???';
       this.example = '????';
+      var answer = document.getElementById('answer');
+      answer.className = 'btn answer';
     },
     revealAnswer: function revealAnswer() {
       if (this.word !== '???' && this.example !== '????') {
         return;
       }
 
+      var answer = document.getElementById('answer');
       this.word = this.words[this.i].word;
       this.example = this.words[this.i].example;
+      answer.className += ' disabled';
     }
   },
   mounted: function mounted() {
@@ -6266,7 +6270,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".quiz-container p[data-v-8970721e] {\n  text-align: center;\n  background: #ffffff73;\n  width: 85%;\n  margin: 10px auto 30px;\n  line-height: 2;\n}\n.next[data-v-8970721e] {\n  background: #9cc48e;\n}\n.answer[data-v-8970721e] {\n  margin: 50px auto 30px;\n  background: #637d59;\n}", ""]);
+exports.push([module.i, ".quiz-container p[data-v-8970721e] {\n  text-align: center;\n  background: #ffffff73;\n  width: 85%;\n  margin: 10px auto 30px;\n  line-height: 2;\n}\n.next[data-v-8970721e] {\n  background: #9cc48e;\n}\n.answer[data-v-8970721e] {\n  margin: 50px auto 30px;\n  background: #637d59;\n}\n.disabled[data-v-8970721e] {\n  display: none;\n}", ""]);
 
 // exports
 
@@ -37508,7 +37512,11 @@ var render = function() {
         _vm._v(" "),
         _c(
           "button",
-          { staticClass: "btn answer", on: { click: _vm.revealAnswer } },
+          {
+            staticClass: "btn answer",
+            attrs: { id: "answer" },
+            on: { click: _vm.revealAnswer }
+          },
           [_vm._v("Answer")]
         ),
         _vm._v(" "),

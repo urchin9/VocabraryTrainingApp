@@ -4,7 +4,7 @@
     <p>{{ words[i].meaning }}</p>
     <p>{{ word }}</p> 
     <p>{{ example }}</p>
-    <button class="btn answer" v-on:click="revealAnswer">Answer</button>
+    <button class="btn answer" id="answer" v-on:click="revealAnswer">Answer</button>
     <button class="btn next" v-on:click="randomNumber">Next</button>
     </div>
 </template>
@@ -24,13 +24,17 @@ export default {
             this.i = Math.floor(Math.random() * this.words.length);
             this.word = '???';
             this.example = '????';
+            const answer = document.getElementById('answer');
+            answer.className = 'btn answer';
         },
         revealAnswer() {
             if (this.word !== '???' && this.example !== '????') {
                 return;
             }
+            const answer = document.getElementById('answer');
             this.word = this.words[this.i].word;
             this.example = this.words[this.i].example;
+            answer.className += ' disabled';
         }
     },
     mounted() {
@@ -57,6 +61,10 @@ export default {
 .answer {
     margin: 50px auto 30px;
     background: #637d59;
+}
+
+.disabled {
+    display: none;
 }
 
 </style>
