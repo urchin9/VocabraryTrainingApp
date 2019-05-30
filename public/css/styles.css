@@ -14,10 +14,6 @@ a {
     text-decoration: none;
 }
 
-/* a:visited {
-    color: #f9f3e3;
-} */
-
 .container h1 {
     font-size: 20px;
 }
@@ -33,7 +29,7 @@ header h1 {
 }
 
 .mynav > ul {
-    margin: 0;  
+    margin: 0;
     padding: 0 0 10px;
     display: flex;
     justify-content: start;
@@ -92,53 +88,19 @@ footer {
 .sub-container {
     width: 90%;
     display: flex;
-    margin-top: 10px;
-    border-bottom: dashed 1px gray;
+    margin: 30px auto 50px;
 }
 
-.num {
-    font-size: 30px;
-    width: 20%;
-    padding: 5px;
-    text-align: center;
+.sub-container table {
+    margin: 0 auto;
+    font-size: 17px;
 }
 
-.num i {
-    margin: 10px auto;
-    color: #2763c1;
+.sub-container table tr th, .sub-container table tr td {
+    padding: 2px 5px;
+    border-bottom: solid 1px;
 }
 
-.num p {
-    margin: 10px 0;
-    font-family: 'Times New Roman', Times, serif;
-    color: #5e5b5c;
-}
-
-.mydate {
-    width: 55%;
-    /* padding: 10px; */
-}
-
-.aim {
-    font-weight: 700;
-    font-size: 22px;
-    margin: 15px 0;
-}
-
-.p-day {
-    margin: 0;
-    font-size: 20px;
-}
-
-.isDone {
-    width: 20%;
-    text-align: center;
-}
-
-.isDone i {
-    font-size: 40px;
-    margin:10px 0 10px 15px;
-}
 
 /* post/index.blade.php */
 .container > h1 {
@@ -180,7 +142,7 @@ footer {
 
 .container > ul {
     padding: 0;
-    margin: 0 20px;
+    /* margin: 0 20px; */
     list-style: none;
 }
 
@@ -229,7 +191,7 @@ li.page-item.active > .page-link {
 }
 
 /* words/create.blade.php, edit.blade.php, login.blade.php, post/create.blade.php */
-.word-create input, .edit-word input, .login-container > form > input, .post-create input, .edit-post input {
+.word-create input, .edit-word input, .login-container > form > input, .post-create input, .edit-post input, .register-container input {
     display: block;
     margin: 10px auto 30px;
     width: 80%;
@@ -296,7 +258,7 @@ li.page-item.active > .page-link {
 }
 
 .edit {
-    background: #9cc48e; 
+    background: #9cc48e;
 }
 
 .delete {
@@ -308,9 +270,18 @@ li.page-item.active > .page-link {
 /* post/create.blade.php */
 .update, .post {
     background: #9cc48e;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
+/* post/show.blade.php */
+.post-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.post-body {
+  line-height: 2;
+}
 
 /* login.blade.php */
 .forget-pw {
@@ -331,3 +302,51 @@ li.page-item.active > .page-link {
     padding: 0 20px;
 }
 
+.resister {
+    background: #9cc48e;
+}
+
+/* components/error_messages.blade.php */
+.flash-messages {
+  list-style: none;
+  color: tomato;
+}
+
+@media (min-width: 900px) {
+  footer, .container {
+    width: 900px;
+    margin: 0 auto;
+  }
+
+  .top {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    width: 500px;
+  }
+
+  .word-create input, .edit-word input, .login-container > form > input, .post-create input, .edit-post input, .register-container input, .form-check, .word-create textarea, .edit-word textarea, .post-create textarea, .edit-post textarea {
+    width: 500px;
+  }
+
+  .quiz-container p {
+      width: 500px!important;
+  }
+
+  .sub-container, .inline-container, .ul-words, .post-ul {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .sub-container table {
+    width: 500px;
+    font-size: 20px;
+  }
+
+  .show-word, .quiz-container h1, .show-post {
+    width: 500px;
+    margin: 0 auto 30px;
+  }
+}

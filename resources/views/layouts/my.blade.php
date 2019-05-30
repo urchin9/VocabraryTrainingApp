@@ -14,7 +14,7 @@
     <header>
         <div class="title">
             <h1>
-                <a href="/home">IELTS Training</a>
+                <a href="/">IELTS Training</a>
                 <i class="canada fab fa-canadian-maple-leaf"></i>
             </h1>
         </div>
@@ -25,7 +25,6 @@
                 <li><a href="{{ url('post') }}">Posts</a></li>
                 <li><a href="{{ url('quiz') }}">Quiz</a></li>
                 <li><a href="{{ url('words') }}">Vocabrary</a></li>
-                <li><a href="#">EditPlan</a></li>
                 <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
             </ul>
@@ -33,10 +32,11 @@
         @endguest
     </header>
     <main id="app">
+        @include('components.error_messages')
         @yield('content')
     </main>
     <footer>
-        <p>&copy; Takuko&uni</p>
+        <p>&copy; uni</p>
     </footer>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>

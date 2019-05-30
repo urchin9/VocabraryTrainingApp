@@ -6,7 +6,7 @@
         <h1>Words List</h1>
         <a href="{{ url('words/create') }}">Add New Word</a>
     </div>
-    <ul>
+    <ul class="ul-words">
         @forelse ($words as $word)
             <li class="word-items"><a href="{{ url('words/' . $word->id) }}">{{ $word->word }}</a></li>
         @empty

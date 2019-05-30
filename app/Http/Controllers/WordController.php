@@ -40,6 +40,12 @@ class WordController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+          'word' => 'max:191',
+          'meaning' => 'max:191',
+          'example' => 'max:191',
+        ]);
+
         $word = new Word;
         $word->word = $request->word;
         $word->meaning = $request->meaning;
@@ -79,6 +85,12 @@ class WordController extends Controller
      */
     public function update(Request $request, Word $word)
     {
+        $this->validate($request, [
+          'word' => 'max:191',
+          'meaning' => 'max:191',
+          'example' => 'max:191',
+        ]);
+
         $word->word = $request->word;
         $word->meaning = $request->meaning;
         $word->example = $request->example;

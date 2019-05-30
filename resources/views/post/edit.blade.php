@@ -7,8 +7,8 @@
     <form method="POST" action="{{ url('post/' . $post->id) }}" class="edit-post">
         @csrf
         @method('PUT')
-        <input type="text" name="title" value="{{ $post->post }}" required autofocus>
-        <textarea type="text" name="body">{{ $post->body }}</textarea>
+        <input type="text" name="title" value="{{ $post->title }}" required autofocus>
+        <textarea type="text" name="body" reuqired>{{ $post->body }}</textarea>
 
         <button type="submit" name="submit" class="btn update">Update</button>
     </form>

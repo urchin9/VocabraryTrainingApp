@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    
+
     public function __construct() {
         $this->middleware('auth');
     }
@@ -40,6 +40,11 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,[
+          'title' => 'required|max:20',
+          'body' => 'required|max:191',
+        ]);
+
         $post = new Post;
         $post->title = $request->title;
         $post->body = $request->body;
@@ -78,6 +83,11 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
+        $this->validate($request,[
+          'title' => 'required|max:20',
+          'body' => 'required|max:191',
+        ]);
+      
         $post->title = $request->title;
         $post->body = $request->body;
         $post->save();
